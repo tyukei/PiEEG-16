@@ -1,0 +1,10 @@
+[Unit]
+Description=Show eeg
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pieeg/Downloads/PiEEG-16/GUI
+ExecStart=/bin/sh -c ' /home/pieeg/Downloads/PiEEG-16/GUI/.venv/bin/python3 /home/pieeg/Downloads/PiEEG-16/GUI/2.Graph_Gpio_D_1_5_4.py /home/pieeg/Downloads/PiEEG-16/GUI/service.log 2>&1'
+
+[Install]
+WantedBy=default.target
